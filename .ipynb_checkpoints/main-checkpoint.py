@@ -24,12 +24,46 @@ feature_names = [
     "compactness_worst", "concavity_worst", "concave_points_worst", "symmetry_worst", "fractal_dimension_worst"
 ]
 
+# Define default values
+default_values = {
+    "radius_mean": 28.0,
+    "texture_mean": 35.0,
+    "perimeter_mean": 180.0,
+    "area_mean": 1500.0,
+    "smoothness_mean": 0.200,
+    "compactness_mean": 0.400,
+    "concavity_mean": 0.550,
+    "concave_points_mean": 0.300,
+    "symmetry_mean": 0.450,
+    "fractal_dimension_mean": 0.150,
+    "radius_se": 0.350,
+    "texture_se": 0.450,
+    "perimeter_se": 0.600,
+    "area_se": 0.800,
+    "smoothness_se": 0.100,
+    "compactness_se": 0.250,
+    "concavity_se": 0.350,
+    "concave_points_se": 0.500,
+    "symmetry_se": 0.700,
+    "fractal_dimension_se": 0.120,
+    "radius_worst": 25.0,
+    "texture_worst": 40.0,
+    "perimeter_worst": 200.0,
+    "area_worst": 1800.0,
+    "smoothness_worst": 0.250,
+    "compactness_worst": 0.450,
+    "concavity_worst": 0.600,
+    "concave_points_worst": 0.400,
+    "symmetry_worst": 0.550,
+    "fractal_dimension_worst": 0.200
+}
+
 # Define the input schema
 class BreastCancerPredictionInput(BaseModel):
     inputs: dict[str, float] = Field(
         ...,
         description="Dictionary of feature names and their corresponding values.",
-        example={name: 0.0 for name in feature_names},
+        example=default_values,  # Use default values here
     )
 
 # Root endpoint
