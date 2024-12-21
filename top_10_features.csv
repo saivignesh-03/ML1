@@ -1,0 +1,11 @@
+feature,importance
+area_mean_smoothness_mean_mult,0.1280988734071225
+radius_mean_smoothness_mean_mult,0.08793077930513503
+perimeter_mean_smoothness_mean_mult,0.06949869156075274
+poly_18,0.06263266600074154
+poly_16,0.05685984092980562
+poly_9,0.05502490907357326
+texture_mean_area_mean_mult,0.044615279405241105
+poly_12,0.033789325044310516
+mean_features,0.028755623801232876
+radius_mean_perimeter_mean_mult,0.027801530385196366
